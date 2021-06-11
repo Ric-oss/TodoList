@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import './App.css';
-import pic from './img.jpg'
+
 
 
 
@@ -63,7 +63,7 @@ class App extends Component {
   onDelete = (id) => { 
     console.log(id);
     let filtered = this.state.items.filter(item => {
-      return item.id != id;
+      return item.id !== id;
     })
     this.setState({items : filtered}, () => this.setProgress(this.state.items));
     // this.setProgress(this.state.items);
